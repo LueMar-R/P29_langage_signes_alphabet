@@ -33,7 +33,3 @@ Le [notebook 01](01_capture_webcam.ipynb) présente la façon dont on peut prend
 Si les résultats de la détection avec Médiapipe sont exellents (on peut observer ces résultats en lançant la détection vidéo du [notebook 03](03_reconnaissance_signes_video.ipynb)), notre modèle de classification souffre de la médiocrité du dataset utilisé. Nous avons tenté de réduire le nombre de classes détectées à 7 (les lettres de "LEARNING"), mais les résultats restent médiocres.
 
 __Il est nécessaire de réentrainer le modèle sur un dataset plus consistant afin d'optenir de réels résultats__
-
-
-
-blablablabla
