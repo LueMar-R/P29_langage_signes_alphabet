@@ -20,16 +20,11 @@ Notre reconnaissance des signes se base donc sur un CNN de classification d'imag
 
 ## Dataset
 
-Les circonstances particulières dans lesquelles a été réalisé ce travail ont posé quelques limites pour la construction du dataset d'entraînement.
+Un dataset commun à l'ensemble des groupes de travail a été constitué. Nous avons réutilisé ce dataset, que nous avons trié et enrichi par endroits.<br>
 
-Si les premiers essais avec Tensorflow Detection API ont pu être réalisés sur le dataset commun à l'ensemble de la classe, nous avons par la suite perdu l'accès aus données. <br>
-Nous avons donc du reconstruire rapidement, pour l'entrainement du modèle présenté, un dataset en local. Si le dataset final est peu fourni et peu diversifié, le code développé pour cette mise en place peut néanmoins être réexploité pour construire un dataset dense et de qualité. <br>
-
-Le [notebook 01](01_capture_webcam.ipynb) présente la façon dont on peut prendre et enregistrer de photos via la webcam, soit en cascade, soit en appuyant sur une touche du clavier.
+Le [notebook 01](01_capture_webcam.ipynb) présente la façon dont on il est possible de prendre et enregistrer des photos grâce à la webCam d'un ordinateur en utilisant la bibliothèque Python Open-CV, soit en cascade, soit en appuyant sur une touche du clavier.
 
 
 ## Résultats
 
-Si les résultats de la détection avec Médiapipe sont exellents (on peut observer ces résultats en lançant la détection vidéo du [notebook 03](03_reconnaissance_signes_video.ipynb)), notre modèle de classification souffre de la médiocrité du dataset utilisé. Nous avons tenté de réduire le nombre de classes détectées à 7 (les lettres de "LEARNING"), mais les résultats restent médiocres.
-
-__Il est nécessaire de réentrainer le modèle sur un dataset plus consistant afin d'optenir de réels résultats__
+Bien que les résultats de la détection avec Médiapipe sont exellents (on peut observer ces résultats en lançant la détection vidéo du [notebook 03](03_reconnaissance_signes_video.ipynb)), et que nos modèles de classification montrent tous également de bons résultats sur les photos (voir le [notebook 02](02_classification_signes.ipynb)), les résultats sont bien plus mitigés en conditions réelles.
