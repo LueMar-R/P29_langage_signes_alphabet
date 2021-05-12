@@ -57,6 +57,11 @@ Ce modèle, très rapide à entrîner étant-donnée la taille réduite du datas
 `264/264 [==============================] - 1s 6ms/step - loss: 0.7546 - accuracy: 0.7720 - val_loss: 0.6568 - `
 `val_accuracy: 0.8242`
 
+Courbes d'accuracy et de loss de l'entraînement :
+
+![image](https://user-images.githubusercontent.com/73179354/117980818-a3a36d80-b334-11eb-84a4-f9a664dbe545.png)
+
+
 
 ### Résultats de la reconnaissance des signes sur les images
 
@@ -65,3 +70,7 @@ La matrice de confusion retournée par notre modèle sur le set de test est la s
 ![image](https://user-images.githubusercontent.com/73179354/117975506-085bc980-b32f-11eb-9d18-7e6be9ce89e5.png)
 
 Les résultats semblent excellents, mais il faut mettre celà en perspective : les photos des datasets de test et d'entrainement se ressemblent énormément : elles ont été faites par seulement une dizaine de personnes différentes, à des distances équivalentes de la caméra, dans des conditions d'éclairage similaires, etc.
+
+## Conclusion
+
+
