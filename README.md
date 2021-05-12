@@ -71,6 +71,21 @@ La matrice de confusion retournée par notre modèle sur le set de test est la s
 
 Les résultats semblent excellents, mais il faut mettre celà en perspective : les photos des datasets de test et d'entrainement se ressemblent énormément : elles ont été faites par seulement une dizaine de personnes différentes, à des distances équivalentes de la caméra, dans des conditions d'éclairage similaires, etc.
 
+
+
+### Résultats de la reconnaissance video
+
+Les bons résultats sur la vidéo sont beaucoup plus difficiles à obtenir. Voici un extrait des quelques lettres qui sont relativement bien reconnues.
+
+![image](images/o-o.png)
+![image](images/v-1.png)
+![image](images/v-2.png)
+![image](images/a-a.png)
+
+
+
 ## Conclusion
 
+Les résultats obtenus par les groupes qui ont utilisé les coordonnées des landmarks médiapipe pour la reconnaissance des signes sont globalement meilleurs que les nôtres. 
 
+Pour cette application en particulier, l'utilisation d'un CNN appliqué à une image 2D est possible, et pourrait donner des résultats corrects avec un meilleur entraînement et un dataset de départ plus fourni. Mais cette méthode n'est pas efficiente comparée avec celle du traitement des landmarks.
