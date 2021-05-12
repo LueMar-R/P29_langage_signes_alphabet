@@ -28,3 +28,40 @@ Le [notebook 01](01_capture_webcam.ipynb) présente la façon dont on il est pos
 ## Résultats
 
 Bien que les résultats de la détection avec Médiapipe sont exellents (on peut observer ces résultats en lançant la détection vidéo du [notebook 03](03_reconnaissance_signes_video.ipynb)), et que nos modèles de classification montrent tous également de bons résultats sur les photos (voir le [notebook 02](02_classification_signes.ipynb)), les résultats sont bien plus mitigés en conditions réelles.
+
+### Architecture utilisée
+
+Nous avons utilisé un CNN pour la résolution du problème de reconnaissance :
+
+```python
+modelX = models.Sequential()
+
+modelX.add(Conv2D(64, 7, padding="same", activation='relu', input_shape=(60,60,3)))
+modelX.add(MaxPooling2D(2))
+modelX.add(Dropout(0.5))
+modelX.add(Conv2D(64, 3, padding="same", activation='relu'))
+modelX.add(MaxPooling2D(2))
+modelX.add(Dropout(0.5))
+modelX.add(Conv2D(128, 3, padding="same", activation='relu'))
+modelX.add(MaxPooling2D(2))
+modelX.add(Dropout(0.5))
+modelX.add(Flatten())
+modelX.add(Dense(64, activation="relu"))
+modelX.add(Dropout(0.25))
+modelX.add(Dense(32, activation="relu"))
+modelX.add(Dropout(0.25))
+modelX.add(Dense(NUM_CLASS, activation='softmax'))
+```
+
+Ce modèle, très rapide à entrîner étant-donnée la taille réduite du dataset, a été entrainé deux fois avec l'optimisateur Adamax et pour des learning rate et valeurs de beta différents. Après 180 epochs (les deux entrainement confondus), nous avons atteind un palier à 82.42% d'accuracy sur le set de validation :<br>
+`264/264 [==============================] - 1s 6ms/step - loss: 0.7546 - accuracy: 0.7720 - val_loss: 0.6568 - `
+`val_accuracy: 0.8242`
+
+
+### Résultats de la reconnaissance des signes sur les images
+
+La matrice de confusion retournée par notre modèle sur le set de test est la suivante :
+
+![image](https://user-images.githubusercontent.com/73179354/117975506-085bc980-b32f-11eb-9d18-7e6be9ce89e5.png)
+
+Les résultats semblent excellents, mais il faut mettre celà en perspective : les photos des datasets de test et d'entrainement se ressemblent énormément : elles ont été faites par seulement une dizaine de personnes différentes, à des distances équivalentes de la caméra, dans des conditions d'éclairage similaires, etc.
