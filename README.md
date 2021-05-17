@@ -79,8 +79,8 @@ Les bons résultats sur la vidéo sont beaucoup plus difficiles à obtenir. Voic
 
 ![o](images/o-o.png)
 ![a](images/a-a.png)
-![v](images/v-1.png)
-![v](images/v-2.png)
+![v](images/v1.png)
+![v](images/v2.png)
 
 
 
