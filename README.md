@@ -77,10 +77,11 @@ Les résultats semblent excellents, mais il faut mettre celà en perspective : l
 
 Les bons résultats sur la vidéo sont beaucoup plus difficiles à obtenir. Voici un extrait des quelques lettres qui sont relativement bien reconnues.
 
-![image](images/o-o.png)
-![image](images/v-1.png)
-![image](images/v-2.png)
-![image](images/a-a.png)
+![o](images/o-o.png)
+![a](images/a-a.png)
+![v](images/v-1.png)
+![v](images/v-2.png)
+
 
 
 
